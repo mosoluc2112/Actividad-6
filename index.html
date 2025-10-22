@@ -3,69 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabla: Inventario y Pedidos</title>
     <style> table, th, td { /* Define el borde: 1 píxel, sólido,
 color negro */ border: 1px solid black; } table { /* Une los
 bordes de las celdas para un look limpio */ border-collapse:
 collapse; } </style>
 </head>
 <body>
+<!-- Creo que este texto en realidad forma parte de la tabla, pero no sé como ponerlo igual que en el ejemplo sin usar CSS, por lo que he decidido ponerlo entre las etiquetas <p> y </p>-->
     <p>Inventario y Pedidos</p>
-    <!-- tiene 9 filas, la última es un footer // tiene 6 columnas // añadir thead y tbody-->
      <table>
-    <th>
-        <td colspan="2" rowspan="2">Información del producto</td>
-        <td colspan="3">Disponibilidad</td>
-        <td rowspan="2" colspan="2">Precio Unitario</td>
-    </th>
-    <tr>
-        <td><b>Tienda A</b></td>
-        <td><b>Tienda B</b></td>
-        <td colspan="2"><b>Almacen Central</b></td>
-    </tr>
-    <tr>
-        <td rowspan="3"><b>Ropa</b></td>
-        <td><b>Camisetas</b></td>
-        <td>100</td>
-        <td>80</td>
-        <td>450</td>
-        <td>15.00€</td>
-    </tr>
-    <tr>
-        <td><b>Pantalones</b></td>
-        <td>50</td>
-        <td>30</td>
-        <td>200</td>
-        <td>30.00€</td>
-    </tr>
-    <tr>
-        <td><b>Zapatillas</b></td>
-        <td colspan="2">Agotado en tiendas</td>
-        <td>200</td>
-        <td>30.00€</td>
-    </tr>
-    <tr>
-        <td rowspan="3"><b>Accesorios</b></td>
-        <td><b>Cinturones</b></td>
-        <td>40</td>
-        <td>0</td>
-        <td rowspan="2">Sin datos</td>
-        <td>20.00€</td>
-    </tr>
-    <tr>
-        <td><b>Gorras</b></td>
-        <td>60</td>
-        <td>15</td>
-        <td>1.00€</td>
-    </tr>
-    <tr>
-        <td colspan="4"><b>Total de Unidades en Inventario</b></td>
-        <td>1340</td>
-    </tr>
-    <tf>
-        <td colspan="7">Proxima revisión de inventario: Fin de mes</td>
-    </tf>
+     <thead>
+        <tr>
+            <th colspan="2" rowspan="2">Información del producto</th>
+            <th colspan="3">Disponibilidad</th>
+            <th rowspan="2" colspan="2">Precio Unitario</th>
+        </tr>
+        <tr>
+            <th>Tienda A</th>
+            <th>Tienda B</th>
+            <th>Almacen Central</th>
+        </tr>
+    </thead>
+    <tbody>
+<!--He buscado y aparecía esta opción y la de usar <center>, pero parece estar obsoleta para html5 por lo que me he decidido por esta opción para centrar el texto.-->
+        <tr>
+            <td rowspan="3" align="center"><b>Ropa</b></td>
+            <td align="center"><b>Camisetas</b></td>
+            <td>100</td>
+            <td>80</td>
+            <td>450</td>
+            <td>15.00€</td>
+        </tr>
+        <tr>
+            <td align="center"><b>Pantalones</b></td>
+            <td>50</td>
+            <td>30</td>
+            <td>200</td>
+            <td>30.00€</td>
+        </tr>
+        <tr>
+            <td align="center"><b>Zapatillas</b></td>
+            <td colspan="2">Agotado en tiendas</td>
+            <td>200</td>
+            <td>30.00€</td>
+        </tr>
+        <tr>
+            <td rowspan="3" align="center"><b>Accesorios</b></td>
+            <td align="center"><b>Cinturones</b></td>
+            <td>40</td>
+            <td>0</td>
+            <td rowspan="2">Sin datos</td>
+            <td>20.00€</td>
+        </tr>
+        <tr>
+            <td align="center"><b>Gorras</b></td>
+            <td>60</td>
+            <td>15</td>
+            <td>12.00€</td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center"><b>Total de Unidades en Inventario</b></td>
+            <td>1340</td>
+        </tr>
+    </tbody>
+    <tfoot>   
+        <tf>
+            <td colspan="7">Proxima revisión de inventario: Fin de mes</td>
+        </tf>
+    </tfoot>
     </table>
-
 </body>
 </html>
